@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&family=Roboto+Slab:wght@100;300;500;800&display=swap');
+
+:root {
+    --accent-color: rgb(136, 173, 255);
+    --main-background-color: rgb(27, 27, 27);
+    --main-leading: rgb(44, 44, 44);
+    --main-white: rgb(226, 226, 226);
+    --transition: all 0.3s linear;
+}
+
+body {
+    font-family: 'Raleway';
+    background-color: rgb(44, 44, 44);
+    color: var(--main-white);
+    margin: 0 auto;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    list-style-type: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sidebar-solid {
+    background-color:rgb(15, 15, 15);
+}
+
+.sidebar-alt {
+    background-color:rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(5px);
+    transition: 1s;
+}
+
+.hide-container {
+    visibility: hidden;
+}
+
+.show-container {
+    visibility: visible;
+}
+
+.faq-header {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.faq-container {
+    width: 620px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.question {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  padding: .5rem 1.5rem 0 1.5rem;
+  margin-bottom: 2rem;
+  background-color: var(--main-white);
+  color: var(--main-background-color);
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.432);
+  transition: margin-bottom 1s ease-in-out;
+}
+
+
+.question-title {
+    font-weight: bold;
+    padding: 1rem 0 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question-text {
+    padding: 1rem 0 1.5rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.question-text p {
+    margin-bottom: 0;
+}
+
+.question-btn {
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    color: var(--accent-color);
+    transition: var(--transition);
+}
+
+.question-btn:hover {
+    transform: rotate(90deg);
+}
+
+.question-text {
+    display: none;
+}
+
+.show-text .question-text {
+    display: block;
+}
+
+.minus-icon {
+    display: none;
+}
+
+.show-text .minus-icon {
+    display: inline;
+}
+
+.show-text .plus-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .faq-container {
+        width: 420px;
+    }
+
+}
